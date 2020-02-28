@@ -6,17 +6,26 @@
 </head>
 <body>
 <head>
-<input type="password" id="password" name="password"/>
-<input name="a" type="submit" value="登 录" onclick="checkpassword();"/>
-<script>
-function checkpassword(){
-var pwd="1234567";
-var inpwd=document.getElementById("password").value;
-if(pwd == inpwd){ 
-window.location.href="http://caocaovip.github.io";
-}
-}
+<meta http-equiv="refresh" content="5;url=https://caocaovip.github.io"> 
 
+<script language = JavaScript >
+function password() {
+	var testV = 1;
+	var pass1 = prompt('请输入密码:', '');
+	while (testV < 3) {
+		if (!pass1) history.go( - 1);
+		if (pass1 == "caocaovip") {
+			alert('密码正确!');
+			break
+		}
+		testV += -1;
+		var pass1 = prompt('密码错误!请重新输入:')
+	}
+	if (pass1 != "password" & testV == 3) history.go( - 1);
+	return " "
+}
+document.write(password());
+	</script>
 
 </body>
 </html>
